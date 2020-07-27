@@ -9,8 +9,9 @@
 
 
 
-public partial class master_subpage {
-    
+public partial class master_subpage
+{
+
     /// <summary>
     /// head control.
     /// </summary>
@@ -19,7 +20,7 @@ public partial class master_subpage {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-    
+
     /// <summary>
     /// menu control.
     /// </summary>
@@ -28,7 +29,7 @@ public partial class master_subpage {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::masterpages_menubar menu;
-    
+
     /// <summary>
     /// body control.
     /// </summary>

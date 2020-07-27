@@ -1,4 +1,5 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="master_subpage" Codebehind="subpage.master.cs" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="master_subpage" CodeBehind="subpage.master.cs" %>
+
 <%@ Register TagPrefix="mb" TagName="menu" Src="~/master/menubar.ascx" %>
 
 <!DOCTYPE html>
@@ -33,7 +34,7 @@
                             <h1><a href="/" id="logo">[SITE NAME HERE]</a></h1>
 
                             <!-- Nav -->
-                            <mb:menu ID="menu" runat="server"/>
+                            <mb:menu ID="menu" runat="server" />
 
                         </div>
                     </div>

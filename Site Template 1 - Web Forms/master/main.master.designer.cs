@@ -9,8 +9,9 @@
 
 
 
-public partial class master_main {
-    
+public partial class master_main
+{
+
     /// <summary>
     /// head control.
     /// </summary>
@@ -19,7 +20,7 @@ public partial class master_main {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-    
+
     /// <summary>
     /// menu control.
     /// </summary>
@@ -28,7 +29,7 @@ public partial class master_main {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::masterpages_menubar menu;
-    
+
     /// <summary>
     /// banner control.
     /// </summary>
@@ -37,7 +38,7 @@ public partial class master_main {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.ContentPlaceHolder banner;
-    
+
     /// <summary>
     /// body control.
     /// </summary>

@@ -85,6 +85,7 @@
     <Content Include="assets\js\util.js" />
     <Content Include="Default.aspx" />
     <Content Include="LICENSE.txt" />
+    <Content Include="Login.aspx" />
     <Content Include="master\menubar.ascx" />
     <Content Include="subpages\SampleSubpage.aspx" />
     <Content Include="Web.config" />
@@ -96,6 +97,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="master\main.master.cs">
       <DependentUpon>main.master</DependentUpon>

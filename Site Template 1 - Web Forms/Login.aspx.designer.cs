@@ -7,56 +7,56 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Site_Template_1___Web_Forms.subpages
+namespace Site_Template_1___Web_Forms
 {
 
 
-    public partial class SampleSubpage
+    public partial class Login
     {
 
         /// <summary>
-        /// AuthenticatedMessagePanel control.
+        /// UserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel AuthenticatedMessagePanel;
+        protected global::System.Web.UI.WebControls.TextBox UserName;
 
         /// <summary>
-        /// WelcomeBackMessage control.
+        /// Password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label WelcomeBackMessage;
+        protected global::System.Web.UI.WebControls.TextBox Password;
 
         /// <summary>
-        /// AnonymousMessagePanel control.
+        /// RememberMe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel AnonymousMessagePanel;
+        protected global::System.Web.UI.WebControls.CheckBox RememberMe;
 
         /// <summary>
-        /// lnkLogin control.
+        /// LoginButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkLogin;
+        protected global::System.Web.UI.WebControls.Button LoginButton;
 
         /// <summary>
-        /// LoginView1 control.
+        /// InvalidCredentialsMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginView LoginView1;
+        protected global::System.Web.UI.WebControls.Label InvalidCredentialsMessage;
     }
 }

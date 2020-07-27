@@ -16,14 +16,24 @@
                             <header>
                                 <h2>Sample Page</h2>
                             </header>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                                labore et dolore magna aliqua. Ultricies lacus sed turpis tincidunt id aliquet risus. Ridiculus mus mauris vitae 
-                                ultricies leo integer malesuada nunc. Mauris a diam maecenas sed. Mattis aliquam faucibus purus in. 
-                                Sagittis purus sit amet volutpat consequat. Malesuada fames ac turpis egestas maecenas pharetra convallis. 
-                                Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Mauris pellentesque pulvinar 
-                                pellentesque habitant morbi tristique. Sed turpis tincidunt id aliquet risus.
-                            </p>
+                            <asp:Panel runat="server" ID="AuthenticatedMessagePanel">
+                                <asp:Label runat="server" ID="WelcomeBackMessage"></asp:Label>
+                            </asp:Panel>
+
+                            <asp:Panel runat="Server" ID="AnonymousMessagePanel">
+                                <asp:HyperLink runat="server" ID="lnkLogin" Text="Log In" NavigateUrl="~/login"></asp:HyperLink>
+                            </asp:Panel>
+
+                            <asp:LoginView ID="LoginView1" runat="server">
+                                <LoggedInTemplate>
+                                    <asp:LoginName ID="LoginName1" runat="server" />
+                                </LoggedInTemplate>
+                                <AnonymousTemplate>
+                                    <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/login">Log In</asp:HyperLink>
+                                </AnonymousTemplate>
+                            </asp:LoginView>
+                            <br />
+
 
                         </section>
                     </div>
