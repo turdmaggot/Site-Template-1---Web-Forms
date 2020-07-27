@@ -43,6 +43,7 @@
     {
         routeCollection.MapPageRoute("home page", "home", "~/Default.aspx");
         routeCollection.MapPageRoute("login page", "login", "~/Login.aspx");
+        routeCollection.MapPageRoute("registration page", "register", "~/Registration.aspx");
         routeCollection.MapPageRoute("sample subpage", "pages/sample", "~/subpages/SampleSubpage.aspx");
     }
       
