@@ -91,7 +91,6 @@
     <Content Include="LICENSE.txt" />
     <Content Include="Login.aspx" />
     <Content Include="master\menubar.ascx" />
-    <Content Include="Registration.aspx" />
     <Content Include="subpages\SampleSubpage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -133,13 +132,6 @@
     </Compile>
     <Compile Include="models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registration.aspx.cs">
-      <DependentUpon>Registration.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Registration.aspx.designer.cs">
-      <DependentUpon>Registration.aspx</DependentUpon>
-    </Compile>
     <Compile Include="services\UserService.cs" />
     <Compile Include="subpages\SampleSubpage.aspx.cs">
       <DependentUpon>SampleSubpage.aspx</DependentUpon>
@@ -191,6 +183,11 @@
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
