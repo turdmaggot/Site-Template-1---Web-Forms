@@ -12,6 +12,8 @@ namespace Site_Template_1___Web_Forms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            dobCalendar.EndDate = DateTime.Now;
+
             // if logged in, redirect to default page.
             if (Request.IsAuthenticated)
             {

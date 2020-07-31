@@ -12,6 +12,9 @@ namespace Site_Template_1___Web_Forms.models
         public string PassHash { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string Gender { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public int CountryID { get; set; }
         public string EmailAdd { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }

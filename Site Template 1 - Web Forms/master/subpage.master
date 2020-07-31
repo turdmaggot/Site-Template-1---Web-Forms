@@ -22,6 +22,7 @@
 </head>
 <body class="subpage">
     <form runat="server">
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
         <div id="page-wrapper">
 
             <!-- Header -->

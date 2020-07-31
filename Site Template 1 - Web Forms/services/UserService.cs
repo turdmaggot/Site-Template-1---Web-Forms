@@ -16,8 +16,11 @@ namespace Site_Template_1___Web_Forms.services
         public static string CreateUser(
             string Username, 
             string Password, 
-            string FirstName, 
-            string LastName, 
+            string FirstName,
+            string LastName,
+            string Gender,
+            DateTime DateOfBirth,
+            int CountryID,
             string EmailAdd) 
         {
             try
@@ -30,11 +33,14 @@ namespace Site_Template_1___Web_Forms.services
                     new SqlParameter("@PassHash", passwordHash),
                     new SqlParameter("@FirstName", FirstName.Trim()),
                     new SqlParameter("@LastName", LastName.Trim()),
+                    new SqlParameter("@Gender", Gender.Trim()),
+                    new SqlParameter("@DateOfBirth", DateOfBirth),
+                    new SqlParameter("@CountryID", CountryID),
                     new SqlParameter("@EmailAdd", EmailAdd.Trim()),
                 };
 
-                string strQuery = "INSERT INTO Users (Username, PassHash, FirstName, LastName, EmailAdd) ";
-                strQuery += "VALUES(@Username, @PassHash, @FirstName, @LastName, @EmailAdd); SELECT SCOPE_IDENTITY()";
+                string strQuery = "INSERT INTO Users (Username, PassHash, FirstName, LastName, Gender, DateOfBirth, CountryID, EmailAdd) ";
+                strQuery += "VALUES(@Username, @PassHash, @FirstName, @LastName, @Gender, @DateOfBirth, @CountryID, @EmailAdd); SELECT SCOPE_IDENTITY()";
 
                 using (SqlConnection con = new SqlConnection(connString))
                 {
@@ -77,6 +83,9 @@ namespace Site_Template_1___Web_Forms.services
                                     PassHash = dr["PassHash"].ToString(),
                                     FirstName = dr["FirstName"].ToString(),
                                     LastName = dr["LastName"].ToString(),
+                                    Gender = dr["Gender"].ToString(),
+                                    DateOfBirth = Convert.ToDateTime(dr["DateOfBirth"]),
+                                    CountryID = Convert.ToInt32(dr["CountryID"]),
                                     EmailAdd = dr["EmailAdd"].ToString(),
                                     DateCreated = Convert.ToDateTime(dr["DateCreated"]),
                                     DateModified = Convert.ToDateTime(dr["DateModified"]),
@@ -118,6 +127,9 @@ namespace Site_Template_1___Web_Forms.services
                                     PassHash = dr["PassHash"].ToString(),
                                     FirstName = dr["FirstName"].ToString(),
                                     LastName = dr["LastName"].ToString(),
+                                    Gender = dr["Gender"].ToString(),
+                                    DateOfBirth = Convert.ToDateTime(dr["DateOfBirth"]),
+                                    CountryID = Convert.ToInt32(dr["CountryID"]),
                                     EmailAdd = dr["EmailAdd"].ToString(),
                                     DateCreated = Convert.ToDateTime(dr["DateCreated"]),
                                     DateModified = Convert.ToDateTime(dr["DateModified"]),
@@ -159,6 +171,9 @@ namespace Site_Template_1___Web_Forms.services
                                     PassHash = dr["PassHash"].ToString(),
                                     FirstName = dr["FirstName"].ToString(),
                                     LastName = dr["LastName"].ToString(),
+                                    Gender = dr["Gender"].ToString(),
+                                    DateOfBirth = Convert.ToDateTime(dr["DateOfBirth"]),
+                                    CountryID = Convert.ToInt32(dr["CountryID"]),
                                     EmailAdd = dr["EmailAdd"].ToString(),
                                     DateCreated = Convert.ToDateTime(dr["DateCreated"]),
                                     DateModified = Convert.ToDateTime(dr["DateModified"]),
@@ -181,6 +196,9 @@ namespace Site_Template_1___Web_Forms.services
             string UserID,
             string FirstName,
             string LastName,
+            string Gender,
+            DateTime DateOfBirth,
+            int CountryID,
             string EmailAdd)
 
         {
@@ -190,10 +208,13 @@ namespace Site_Template_1___Web_Forms.services
                     new SqlParameter("@UserID", UserID),
                     new SqlParameter("@FirstName", FirstName.Trim()),
                     new SqlParameter("@LastName", LastName.Trim()),
+                    new SqlParameter("@Gender", Gender.Trim()),
+                    new SqlParameter("@DateOfBirth", DateOfBirth),
+                    new SqlParameter("@CountryID", CountryID),
                     new SqlParameter("@EmailAdd", EmailAdd.Trim()),
                 };
 
-                string strQuery = "UPDATE Users SET FirstName=@FirstName, LastName=@LastName, EmailAdd=@EmailAdd, ";
+                string strQuery = "UPDATE Users SET FirstName=@FirstName, LastName=@LastName, Gender=@Gender, DateOfBirth=@DateOfBirth, CountryID=@CountryID, EmailAdd=@EmailAdd, ";
                 strQuery += "DateModified=GETDATE() WHERE UserID=@UserID";
 
                 using (SqlConnection con = new SqlConnection(connString))
